@@ -8,38 +8,38 @@ import Signup from "./pages/Signup";
 import Home from "./pages/Home";
 
 const router = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <DefaultLayout />,
+    children: [
+      {
+        path: "/home",
+        element: <Navigate to={"/"} />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
         path: "/",
-        element: <DefaultLayout />,
-        children: [
-            {
-                path: "/home",
-                element: <Navigate to={"/"} />,
-            },
-            {
-                path: "/dashboard",
-                element: <Dashboard />,
-            },
-            {
-                path: "/",
-                element: <Home />,
-            },
-        ],
-    },
-    {
-        path: "/",
-        element: <GuestLayout />,
-        children: [
-            {
-                path: "/login",
-                element: <Login />,
-            },
-            {
-                path: "/signup",
-                element: <Signup />,
-            },
-        ],
-    },
+        element: <Home />,
+      },
+    ],
+  },
+  {
+    path: "/",
+    element: <GuestLayout />,
+    children: [
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/signup",
+        element: <Signup />,
+      },
+    ],
+  },
 ]);
 
 export default router;
