@@ -1,21 +1,23 @@
-import { createContext, useContext } from "react";
-import { useState } from "react";
+import { createContext, useContext, useState } from "react";
+
 const StateContext = createContext({
   currentUser: {},
   userToken: null,
   setCurrentUser: () => {},
   setUserToken: () => {},
 });
+
 export const ContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState({});
-  const [userToken, setUserToken] = useState(null);
+  const [userToken, setUserToken] = useState("");
+
   return (
     <StateContext.Provider
       value={{
         currentUser,
         setCurrentUser,
         userToken,
-        setCurrentUser,
+        setUserToken,
       }}
     >
       {children}
@@ -23,4 +25,4 @@ export const ContextProvider = ({ children }) => {
   );
 };
 
-export const userStateContext = () => useContext(StateContext);
+export const UserStateContext = () => useContext(StateContext);

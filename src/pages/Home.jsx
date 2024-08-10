@@ -159,7 +159,7 @@ export default function Home() {
                 <div className="relative ">
                   <img
                     alt=""
-                    src="https://images.unsplash.com/photo-1508245740873-1a4820efedf8?q=80&w=2006&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={image1}
                     className="relative w-full h-full"
                   ></img>
                 </div>
@@ -191,7 +191,7 @@ export default function Home() {
         <div className="h-full">
           <div className="flex justify-center ">TOP TREND</div>
           <div className="w-full lg:mt-0 mt-5  h-[1px] bg-[#401D01] "></div>
-          <div className="grid py-9 md:grid-cols-12">
+          <div className="px-3 lg:grid py-9 md:grid-cols-12">
             <div className="grid col-start-2 col-end-5">
               <div className="flex flex-col">
                 <h1 className="text-2xl font-baskervville ">
